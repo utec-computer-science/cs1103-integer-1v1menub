@@ -5,26 +5,27 @@
 #include "Integer.h"
 
 Integer::Integer() {
-}
-
-Integer::Integer(int _value) {
-    value = _value;
-}
-
-Integer::Integer(const Integer& other) {
-    value = other.value;
-}
-
-Integer operator=(const Integer& other) {
 
 }
 
-Integer operator+(int x) {
+Integer::Integer(int value) {
+
 }
 
+Integer::Integer(const Integer &other) {
+
+}
+
+Integer Integer::operator+(const Integer &other) {
+    return Integer();
+}
+
+Integer Integer::operator=(int x) {
+    return Integer();
+}
 
 Integer::operator int() {
-
+    return 0;
 }
 
 //NO ME ACORDABA NADA DE SOBRECARGA DE OPERADORES. VI TODOS LOS VIDEOS QUE PUDE/ LEI TUTORIALES EN INTERNET
