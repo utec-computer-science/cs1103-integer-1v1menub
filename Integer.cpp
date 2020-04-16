@@ -15,16 +15,24 @@ Integer::Integer(const Integer &other) {
     value = other.value;
 }
 
-Integer Integer::operator+(const Integer &other) {
-    return Integer();
+Integer Integer::operator=(const Integer &other) {
+    return value = other.value;
 }
 
-Integer Integer::operator=(int x) {
-    return Integer();
+Integer Integer::operator+(int _value) {
+    return value + _value;
 }
 
 Integer::operator int() {
-    return 0;
+    return (int)value;
 }
 
-//ESTOY CONFUNDIDO NO SE COMO HACER ESTO
+std::ostream &operator<<(std::ostream &os, const Integer &lol) {
+    os << lol.value;
+    return os;
+}
+
+std::istream &operator>>(std::istream &os, Integer &lol) {
+    os >> lol.value;
+    return os;
+}

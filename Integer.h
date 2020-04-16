@@ -6,18 +6,19 @@
 #define POO2_TEO_IMPLEMENTING_INTEGER_INTEGER_H
 
 #include <iostream>
+using namespace std;
 
 class Integer {
     int value;
 public:
     Integer();
-    Integer(int value);
+    Integer(int _value);
     Integer(const Integer& other);
-    Integer operator+(const Integer& other);
-    Integer operator=(int x);
+    Integer operator=(const Integer& other);
+    Integer operator+(int _value);
     operator int();
-    friend std::ostream& operator <<(std::ostream os, const Integer&);
-    friend std::istream& operator >>(std::istream os, Integer&);
+    friend std::ostream& operator << (std::ostream& os, const Integer& lol);
+    friend std::istream& operator >> (std::istream& os, Integer& lol);
 };
 
 
